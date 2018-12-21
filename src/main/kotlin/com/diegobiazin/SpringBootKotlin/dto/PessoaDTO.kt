@@ -1,4 +1,10 @@
 package com.diegobiazin.SpringBootKotlin.dto
 
-class PessoaDTO {
+import com.diegobiazin.SpringBootKotlin.domain.Pessoa
+
+class PessoaDTO(val id: String,
+                val nome: String,
+                val email: String) {
+
+    constructor(pessoa: Pessoa) : this(pessoa.id!!, pessoa.nome, pessoa.email)
 }
